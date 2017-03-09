@@ -5,9 +5,9 @@ import { getFriendInfo, getUserGames, getSharedGames, getGameInfo } from '../lib
 export default class extends React.Component {
   static async getInitialProps () {
     //   return getUserInfo('76561197964790875').then((players) => ({ players }));
-    //   return getFriendInfo('76561197964790875').then((players) => ({ players }));
+      return getFriendInfo('76561197964790875').then((players) => ({ players }));
     // return getUserGames('76561197964790875').then((players) => ({ players }));
-      return getSharedGames(['76561197964790875','76561198105819920']).then((players) => ({ players }));
+    //   return getAllUsersGames(['76561197964790875','76561198105819920']).then((players) => ({ players }));
     //   return getGameInfo('292030').then((players) => ({ players }));
   }
 
