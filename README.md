@@ -1,2 +1,2 @@
-# SteamShare2
+# SteamShare
 # Halp
