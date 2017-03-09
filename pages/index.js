@@ -1,21 +1,24 @@
 import React from 'react';
-import 'isomorphic-fetch';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import App from '../components/app';
+import reducers from '../reducers';
 
-export default class extends React.Component {
-  static getInitialProps () {
-    return fetch('http://api.steampowered.com/ISteamUser/GetFriendList/v0001/?key=FDF267D8BAEE833D4569D2433FB4AD4F&steamid=76561197960435530&relationship=friend')
-    .then((res) => {
-        return res.json();
-    }).then((data) => {
-        return { friends: data.friendslist };
-    });
+export default class Index extends React.Component {
+  static getInitialProps() {
+    return { state: createStore(reducers).getState() };
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = { store: createStore(reducers, props.state) };
   }
 
   render() {
     return (
-        <div>
-            {JSON.stringify(this.props.friends)}
-        </div>
+      <Provider store={this.state.store}>
+        <App />
+      </Provider>
     );
   }
 }
