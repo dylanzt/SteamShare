@@ -10,7 +10,19 @@ class FriendsList extends React.Component {
       selectedFriends: {},
     };
 
+    this.findCommonFriends = this.findCommonFriends.bind(this);
     this.selectOrUnselectFriend = this.selectOrUnselectFriend.bind(this);
+  }
+
+  findCommonFriends() {
+    const { games } = this.props;
+    let selectedFriends = [];
+    Object.keys(this.state.selectedFriends).forEach((friend) => {
+      if (this.state.selectedFriends[friend]) {
+        selectedFriends.push(friend);
+      }
+    });
+    console.log(selectedFriends);
   }
 
   selectOrUnselectFriend(steamId) {
@@ -33,7 +45,7 @@ class FriendsList extends React.Component {
   }
 
   render() {
-    const { user, friends } = this.props;
+    const { user, friends, games } = this.props;
 
     return (
       <div>
@@ -42,7 +54,7 @@ class FriendsList extends React.Component {
             <img src={user.avatar}/>
             <h1>{user.name}</h1>
           </div>
-          <button className="find-games-button">Find games we can play!</button>
+          <button disabled={!games.length} onClick={this.findCommonFriends} className="find-games-button">Find games we can play!</button>
         </div>
         <div className="friends">
           {friends.map((friend) => (
@@ -127,7 +139,8 @@ class FriendsList extends React.Component {
   }
 }
 
-export default connect(({ user, friends }) => ({
+export default connect(({ user, friends, games }) => ({
   user,
   friends,
+  games,
 }))(FriendsList);
