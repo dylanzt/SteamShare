@@ -7,7 +7,7 @@ const user = (state = defaultState, action = {}) => {
     case GET_USER_INFO_SUCCESS:
       return {
         ...state,
-        ...user,
+        ...action.data,
       };
     default:
       return state;
