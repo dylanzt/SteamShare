@@ -1,7 +1,17 @@
-const defaultState = 'user';
+import { GET_USER_INFO_SUCCESS } from '../actions/user';
+
+const defaultState = {};
 
 const user = (state = defaultState, action = {}) => {
-  return state;
+  switch (action.type) {
+    case GET_USER_INFO_SUCCESS:
+      return {
+        ...state,
+        ...user,
+      };
+    default:
+      return state;
+  }
 }
 
 export default user;

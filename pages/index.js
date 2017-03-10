@@ -7,7 +7,7 @@ import reducers from '../reducers';
 
 export default class Index extends React.Component {
   static getInitialProps() {
-    return { state: createStore(reducers, null, applyMiddleware(thunk)).getState() };
+    return { state: createStore(reducers, applyMiddleware(thunk)).getState() };
   }
 
   constructor(props) {
