@@ -35,7 +35,7 @@ class Login extends React.Component {
           .main {
             flex-basis: 50%;
             display: flex;
-            'justify-content: center;
+            justify-content: center;
             padding-top: 20%;
             flex-direction: column;
             text-align: center;
