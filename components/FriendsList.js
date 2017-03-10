@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
-// import { } from '../actions/user';
+import { getGamesList } from '../actions/user';
 
 class FriendsList extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class FriendsList extends React.Component {
       return gamesOwnedByFriends[friend];
     });
 
-    _.intersection(...gamesOwnedBySelectedFriends);
+    this.props.getGamesList(_.intersection(...gamesOwnedBySelectedFriends));
   }
 
   selectOrUnselectFriend(steamId) {
@@ -155,4 +155,4 @@ export default connect(({ user, friends, games }) => ({
   user,
   friends,
   games,
-}))(FriendsList);
+}), { getGamesList })(FriendsList);

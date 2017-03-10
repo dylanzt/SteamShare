@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import user from './user';
 import friends from './friends';
 import games from './games';
+import commonGames from './commonGames';
 import workflow from './workflow';
 
 const reducers = combineReducers({
@@ -9,6 +10,7 @@ const reducers = combineReducers({
   friends,
   games,
   workflow,
+  commonGames,
 });
 
 export default reducers;
