@@ -64,10 +64,10 @@ class Login extends React.Component {
             display: inline-block;
             position: relative;
             min-width: 125px;
-            padding: 13.25px 40px;
+            padding: 20px 40px;
             font-size: 14px;
             font-weight: 600;
-            line-height: 1.25;
+            line-height: 0;
             border: 2px solid transparent;
             border-radius: 100px;
             transition: all 250ms ease-in-out;
