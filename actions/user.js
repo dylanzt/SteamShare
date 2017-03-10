@@ -22,7 +22,6 @@ export function getUserAndFriends(steamId) {
         type: GET_FRIENDS_INFO_SUCCESS,
         data: friends,
       });
-      console.log(friends.map((friend) => friend.steamId));
       getAllUsersGames(friends.map((friend) => friend.steamId))
       .then((games) => {
         dispatch({

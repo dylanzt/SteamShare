@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { connect } from 'react-redux';
 // import { } from '../actions/user';
 
@@ -22,7 +23,18 @@ class FriendsList extends React.Component {
         selectedFriends.push(friend);
       }
     });
-    console.log(selectedFriends);
+
+    const gamesOwnedByFriends = {};
+
+    games.forEach(({ gameIds, steamId }) => {
+      gamesOwnedByFriends[steamId] = gameIds;
+    });
+
+    const gamesOwnedBySelectedFriends = selectedFriends.map((friend) => {
+      return gamesOwnedByFriends[friend];
+    });
+
+    _.intersection(...gamesOwnedBySelectedFriends);
   }
 
   selectOrUnselectFriend(steamId) {
