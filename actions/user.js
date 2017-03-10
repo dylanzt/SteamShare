@@ -8,14 +8,4 @@ export const GET_USER_INFO_SUCCESS = 'GET_USER_INFO_SUCCESS';
 
 export function getUserAndFriends(steamId) {
   console.log(steamId);
-  return (dispatch) => {
-    getUserInfo(steamId)
-      .then(([user]) => {
-        console.log(user);
-        dispatch({
-          type: GET_USER_INFO_SUCCESS,
-          data: user,
-        })
-      })
-  };
 }
