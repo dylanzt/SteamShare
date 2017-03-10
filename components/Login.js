@@ -23,23 +23,23 @@ class Login extends React.Component {
         </div>
         <style jsx>{`
           .wrapper {
-            display: 'flex',
-            'justify-content': 'center',
-            'flex-direction': 'row',
-            'text-align': 'center',
-            'background': 'linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2b2b2b 76%,#1c1c1c 91%,#2c2c2c 96%,#111111 97%,#000000 99%,#2c2c2c 100%,#131313 100%)',
-            height: '1000px',
-            width: '100%',
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            text-align: center;
+            background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2b2b2b 76%,#1c1c1c 91%,#2c2c2c 96%,#111111 97%,#000000 99%,#2c2c2c 100%,#131313 100%);
+            height: 1000px;
+            width: 100%;
           }
 
           .main {
-            'flex-basis': '50%',
-            display: 'flex',
-            'justify-content': 'center',
-            'padding-top': '20%',
-            'flex-direction': 'column',
-            'text-align': 'center',
-            height: '100px',
+            flex-basis: 50%;
+            display: flex;
+            'justify-content: center;
+            padding-top: 20%;
+            flex-direction: column;
+            text-align: center;
+            height: 100px;
           }
 
           .text {
@@ -60,21 +60,22 @@ class Login extends React.Component {
           }
 
           .button {
-            'flex-basis': '20%',
-            display: 'inline-block',
-            position: 'relative',
-            'min-width': '125px',
-            padding: '13.25px 40px',
-            'font-size': '14px',
-            'font-weight': '600',
-            'line-height': '1.25',
-            border: '2px solid transparent',
-            'border-radius': '100px',
-            transition: 'all 250ms ease-in-out',
-            'background-color': '#BBB',
-            ':hover': {
-              'background-color': '#DDD',
-            }
+            flex-basis: 20%;
+            display: inline-block;
+            position: relative;
+            min-width: 125px;
+            padding: 13.25px 40px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.25;
+            border: 2px solid transparent;
+            border-radius: 100px;
+            transition: all 250ms ease-in-out;
+            background-color: #BBB;
+          }
+
+          .button:hover {
+            background-color: #DDD;
           }
         `}</style>
       </div>
