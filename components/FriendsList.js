@@ -5,6 +5,31 @@ import { connect } from 'react-redux';
 class FriendsList extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      selectedFriends: {},
+    };
+
+    this.selectOrUnselectFriend = this.selectOrUnselectFriend.bind(this);
+  }
+
+  selectOrUnselectFriend(steamId) {
+    if (this.state.selectedFriends[steamId]) {
+      this.setState({
+        selectedFriends: {
+          ...this.state.selectedFriends,
+          [steamId]: false,
+        }
+      });
+    } else {
+      this.setState({
+        selectedFriends: {
+          ...this.state.selectedFriends,
+          [steamId]: true,
+        }
+      })
+    }
+
   }
 
   render() {
@@ -18,7 +43,10 @@ class FriendsList extends React.Component {
         </div>
         <div className="friends">
           {friends.map((friend) => (
-            <li className="name-avatar name-avatar-medium">
+            <li
+              onClick={() => this.selectOrUnselectFriend(friend.steamId)}
+              className={`name-avatar name-avatar-medium${this.state.selectedFriends[friend.steamId] ? ' selected' : ''}`}
+            >
               <img src={friend.avatar}/>
               <h2>{friend.name}</h2>
             </li>
