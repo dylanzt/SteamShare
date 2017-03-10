@@ -16,6 +16,14 @@ class FriendsList extends React.Component {
           <img src={user.avatar}/>
           <h1>{user.name}</h1>
         </div>
+        <div className="friends">
+          {friends.map((friend) => (
+            <li>
+              <img src={friend.avatar}/>
+              <h2>{friend.name}</h2>
+            </li>
+          ))}
+        </div>
       </div>
     );
   }

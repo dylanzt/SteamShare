@@ -5,10 +5,10 @@ const defaultState = [];
 const friends = (state = defaultState, action = {}) => {
   switch (action.type) {
     case GET_FRIENDS_INFO_SUCCESS:
-      return {
+      return [
         ...state,
         ...action.data,
-      };
+      ];
     default:
       return state;
   }
