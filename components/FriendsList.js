@@ -26,10 +26,6 @@ class FriendsList extends React.Component {
         </div>
 
         <style jsx>{`
-          .name-avatar-big {
-            background-color: lightgreen;
-          }
-
           .name-avatar {
             display: flex;
             border: 1px dotted grey;
@@ -46,6 +42,10 @@ class FriendsList extends React.Component {
 
           .name-avatar img {
             margin-right: 16px;
+          }
+
+          .name-avatar-big {
+            background-color: lightgreen;
           }
         `}</style>
       </div>
