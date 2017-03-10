@@ -43,20 +43,20 @@ class Login extends React.Component {
           }
 
           .text {
-            'flex-basis': '100%',
-            'margin-bottom': '10px',
-            'font-family': 'Roboto, Arial, sans-serif',
-            'font-size': '40px',
-            color: '#DDD'
+            flex-basis: 100%
+            margin-bottom: 10px
+            font-family: Roboto Arial sans-serif
+            font-size: 40px
+            color: #DDD
           }
 
           .input {
-            'flex-basis': '20%',
-            'margin-bottom': '10px',
-            'font-family': 'Roboto, Arial, sans-serif',
-            'font-size': '30px',
-            'text-align': 'center',
-            'color': '#444'
+            flex-basis: 20%
+            margin-bottom: 10px
+            font-family: Roboto Arial sans-serif
+            font-size: 30px
+            text-align: center
+            color: #444
           }
 
           .button {
