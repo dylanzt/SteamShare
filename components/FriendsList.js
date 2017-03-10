@@ -73,6 +73,10 @@ class FriendsList extends React.Component {
             background-color: #ddf8e1;
           }
 
+          .selected:hover {
+            background-color: #ecfaef;
+          }
+
           .name-avatar img {
             margin-right: 16px;
             border: 3px solid black;
