@@ -54,6 +54,9 @@ class FriendsList extends React.Component {
         </div>
 
         <style jsx>{`
+          .friends {
+            margin-top: 234px;
+          }
 
           .name-avatar {
             display: flex;
@@ -68,7 +71,7 @@ class FriendsList extends React.Component {
           .name-avatar-medium:hover {
             background-color: #DDD;
           }
-          
+
           .selected {
             background-color: #ddf8e1;
           }
@@ -81,7 +84,7 @@ class FriendsList extends React.Component {
             margin-right: 16px;
             border: 3px solid black;
           }
-          
+
           .name-avatar-medium {
             padding: 16px 16px 0px 16px;
           }
@@ -95,6 +98,9 @@ class FriendsList extends React.Component {
           }
 
           .name-avatar-big {
+            position: fixed;
+            top: 0;
+            width: 100%;
             background-color: lightgreen;
           }
         `}</style>
