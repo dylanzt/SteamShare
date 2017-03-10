@@ -1,10 +1,10 @@
-import { GET_USER_AND_FRIENDS_SUCCESS } from '../actions/user';
+import { GET_FRIENDS_INFO_SUCCESS } from '../actions/user';
 
 const defaultState = [];
 
 const friends = (state = defaultState, action = {}) => {
   switch (action.type) {
-    case GET_USER_AND_FRIENDS_SUCCESS:
+    case GET_FRIENDS_INFO_SUCCESS:
       return {
         ...state,
         ...action.data,
