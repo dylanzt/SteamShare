@@ -26,6 +26,7 @@ class FriendsList extends React.Component {
         </div>
 
         <style jsx>{`
+
           .name-avatar {
             display: flex;
             border: 1px dotted grey;
@@ -35,13 +36,30 @@ class FriendsList extends React.Component {
             border-radius: 8px;
             transition: all 250ms ease-in-out;
           }
-          
-          .name-avatar:hover {
+
+          .name-avatar-medium:hover {
             background-color: #DDD;
+          }
+          
+          .selected {
+            background-color: #ddf8e1;
           }
 
           .name-avatar img {
             margin-right: 16px;
+            border: 3px solid black;
+          }
+          
+          .name-avatar-medium {
+            padding: 16px 16px 0px 16px;
+          }
+
+          .name-avatar-medium h2 {
+            margin-top: 8px;
+          }
+
+          .name-avatar-medium img {
+            height: 40px;
           }
 
           .name-avatar-big {

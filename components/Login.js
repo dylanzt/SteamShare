@@ -27,7 +27,6 @@ class Login extends React.Component {
             justify-content: center;
             flex-direction: row;
             text-align: center;
-            background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2b2b2b 76%,#1c1c1c 91%,#2c2c2c 96%,#111111 97%,#000000 99%,#2c2c2c 100%,#131313 100%);
             height: 1000px;
             width: 100%;
           }
@@ -47,7 +46,6 @@ class Login extends React.Component {
             margin-bottom: 10px;
             font-family: Roboto Arial sans-serif;
             font-size: 40px;
-            color: #DDD;
           }
 
           .input {
