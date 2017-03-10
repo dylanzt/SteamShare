@@ -35,8 +35,13 @@ class FriendsList extends React.Component {
             border: 1px dotted grey;
             padding: 16px;
             margin-bottom: 16px;
-            background-color: lightgrey;
+            background-color: #BBB;
             border-radius: 8px;
+            transition: all 250ms ease-in-out;
+          }
+          
+          .name-avatar:hover {
+            background-color: #DDD;
           }
 
           .name-avatar img {
